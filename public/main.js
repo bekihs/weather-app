@@ -10,7 +10,10 @@ class contrller{
     initApplication(){
         $(".submitCity").click(()=>{
                     var cityName = $(".cityInput").val();
-                    var itemObj = ajaxApi.fetch(cityName)
+                    var itemObj = ajaxApi.fetch(cityName).then((postObj)=>{
+             //             data1.addItem(postObj);
+           // renderPosts.renderPost(data1.postsArray);
+                    });
 
                 })
         $('.posts').on('click', '.submitComment', function(){
